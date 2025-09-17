@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Mohammadreza Kavianpour</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        /* Style for the active navigation link */
+        .nav-link.active {
+            background-color: #0891b2; /* cyan-600 */
+            color: white;
+        }
+        /* Hide all content sections by default */
+        .content-section {
+            display: none;
+        }
+        /* Show the first section by default */
+        #home {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .content-section {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- This div can be used for a logo or brand name if needed in the future -->
+            <div class="text-2xl font-bold text-white invisible">Mohammadreza Kavianpour</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-1 mx-auto">
+                <a href="#" class="nav-link active py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="home">Home</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="publications">Publications</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="projects">Projects</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="education">Education</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="skills">Skills</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="blog">Blog Posts</a>
+                <a href="#" class="nav-link py-2 px-3 rounded-md hover:bg-gray-700 transition-colors" data-target="contact">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#" class="nav-link-mobile active block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="home">Home</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="publications">Publications</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="projects">Projects</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="education">Education</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="skills">Skills</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="blog">Blog Posts</a>
+            <a href="#" class="nav-link-mobile block py-3 px-6 hover:bg-gray-700 transition-colors" data-target="contact">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 lg:p-12 flex flex-col lg:flex-row gap-12">
+        
+        <!-- Left Sidebar -->
+        <aside class="w-full lg:w-1/3 xl:w-1/4">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg lg:sticky lg:top-24">
+                <img src="https://placehold.co/200x200/1F2937/FFFFFF?text=MK" alt="Mohammadreza Kavianpour" class="w-40 h-40 rounded-full mx-auto border-4 border-cyan-500">
+                <h1 class="text-3xl font-bold text-white text-center mt-4">Mohammadreza Kavianpour</h1>
+                <p class="text-center text-cyan-400 mt-1">AI Research Scientist</p>
+                <ul class="mt-6 space-y-3 text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt w-6 text-center text-lg text-cyan-400"></i>
+                        <span class="ml-3">Tehran, Iran</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope w-6 text-center text-lg text-cyan-400"></i>
+                        <a href="mailto:kavianpour.tmu@gmail.com" class="ml-3 hover:text-cyan-300">kavianpour.tmu@gmail.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fab fa-linkedin w-6 text-center text-lg text-cyan-400"></i>
+                        <a href="https://www.linkedin.com/in/kavianpour/" target="_blank" class="ml-3 hover:text-cyan-300">LinkedIn Profile</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fab fa-github w-6 text-center text-lg text-cyan-400"></i>
+                        <a href="https://github.com/kavianpour" target="_blank" class="ml-3 hover:text-cyan-300">GitHub Profile</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-graduation-cap w-6 text-center text-lg text-cyan-400"></i>
+                        <a href="https://scholar.google.com/citations?user=your_scholar_id" target="_blank" class="ml-3 hover:text-cyan-300">Google Scholar</a>
+                    </li>
+                     <li class="flex items-center">
+                        <i class="fab fa-orcid w-6 text-center text-lg text-cyan-400"></i>
+                        <a href="https://orcid.org/0000-0002-7362-3925" target="_blank" class="ml-3 hover:text-cyan-300">ORCID Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="w-full lg:w-2/3 xl:w-3/4">
+            <!-- Home Section -->
+            <section id="home" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Home</h2>
+                
+                <h3 class="text-2xl font-bold text-white mt-8 mb-4">About Me</h3>
+                <div id="bio-content" class="text-lg space-y-4 text-gray-300 leading-relaxed">
+                    <p>
+                        Highly motivated AI Solutions Architect with a proven track record of developing innovative, interdisciplinary AI-based solutions for real-world challenges. Expertise in diverse applications such as prognosis and health management of mechanical equipment, question-answering chatbot using LLM and RAG (in Persian and English), digital-twin assisted transportation management, IoT-based calving time prediction for cattle in smart livestock farming, earthquake prediction modeling, and ship's fuel consumption forecasting using multi-sensor information.
+                    </p>
+                    <p>
+                        Driven by a passion for leveraging AI to create impactful solutions and improve outcomes across various industries.
+                    </p>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mt-10 mb-4">Research Interests</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Interdisciplinary AI Research</span>
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Deep & Machine Learning</span>
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Time-Series Analysis</span>
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Large Language Models</span>
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Multimodal Learning</span>
+                    <span class="bg-cyan-900 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-full">Graph Neural Networks</span>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-white mt-10 mb-4">News & Updates</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-300">
+                    <li>Our latest paper on 'Knowledge Distillation...' has been submitted to <span class="text-cyan-400">Knowledge-Based Systems</span>.</li>
+                    <li>Excited to share our new work on 'Partial-Imbalance Robust Domain Adaptation...' is now under review at <span class="text-cyan-400">Measurement</span>.</li>
+                    <li>Pleased to announce that our paper 'A CNN-BILSTM Model with Attention Mechanism...' has been published in <span class="text-cyan-400">The Journal of Supercomputing</span>.</li>
+                     <li>Our work on 'Spatial Graph Convolutional Neural Network...' was published in <span class="text-cyan-400">Neurocomputing</span>.</li>
+                </ul>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Publications</h2>
+                <div class="mt-8 space-y-6">
+                    <!-- Publication 1 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white" data-id="title">Knowledge Distillation and Enhanced Subdomain Adaptation Using Graph Convolutional Network for Resource-Constrained Fault Diagnosis</p>
+                        <p class="text-sm text-gray-400 mt-1" data-id="authors"><span class="font-semibold text-gray-300">Mohammadreza Kavianpour</span>, Parisa Kavianpour, Amin Ramezani, Mohammad TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Submitted to Knowledge-Based Systems (Revised), Elsevier, 2025</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold" target="_blank">
+                                <i class="fas fa-link mr-2"></i>Article Link
+                            </a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the abstract. You can replace this text with the actual abstract of your publication.</p>
+                        </div>
+                    </div>
+                    <!-- Publication 2 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white" data-id="title">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
+                        <p class="text-sm text-gray-400 mt-1" data-id="authors"><span class="font-semibold text-gray-300">Mohammadreza Kavianpour</span>, Parisa Kavianpour, Amin Ramezani, Mohammad TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Submitted to Measurement (Under Review), Elsevier, 2025</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold" target="_blank">
+                                <i class="fas fa-link mr-2"></i>Article Link
+                            </a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the abstract. You can replace this text with the actual abstract of your publication.</p>
+                        </div>
+                    </div>
+                     <!-- Publication 3 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white" data-id="title">A Class Alignment Method Based on Graph Convolution Neural Network for Bearing Fault Diagnosis in the presence of Missing Data and Changing Working Conditions</p>
+                        <p class="text-sm text-gray-400 mt-1" data-id="authors"><span class="font-semibold text-gray-300">Mohammadreza Kavianpour</span>, Amin Ramezani, Mohammad TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Measurement, Elsevier, 2022</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold" target="_blank">
+                                <i class="fas fa-link mr-2"></i>Article Link
+                            </a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the abstract. You can replace this text with the actual abstract of your publication.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Projects</h2>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Conversational Chatbot (LLM & RAG)</h3>
+                            <p class="mt-3 text-gray-400">Designed and deployed advanced conversational chatbots using LLMs and Retrieval-Augmented Generation (RAG) to optimize customer service and enhance user experience.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LLM</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">RAG</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LangChain</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">IoT-based Calving Time Prediction</h3>
+                            <p class="mt-3 text-gray-400">Developed a real-time system for predicting cattle calving time in smart livestock farming with over 74% accuracy, issuing alerts 6 hours before calving.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">IoT</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                                 <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Time-Series</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Digital Twin Traffic Management</h3>
+                            <p class="mt-3 text-gray-400">Implemented digital twin and AI-driven traffic management systems, optimizing parking and signal control through real-time data analysis and advanced simulations.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Digital Twin</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Aimsun</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">SUMO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Education</h2>
+                <div class="mt-8 space-y-6">
+                     <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Ph.D. in Electrical Engineering - Control</p>
+                        <p class="text-md text-gray-300 mt-1">Tarbiat Modares University</p>
+                        <p class="text-sm text-cyan-400 mt-1">Sep. 2018 - July. 2023</p>
+                        <div class="mt-3 flex justify-between items-center">
+                            <p class="text-gray-400"><span class="font-semibold text-gray-300">Thesis:</span> Bearing Fault Diagnosis Using Advanced Deep Learning Methods...</p>
+                             <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the Ph.D. thesis abstract. Details & challenges: Physics-informed generated data, noise interference, missing data, distribution discrepancy, and the scarcity of real labeled data. Used advanced graph neural networks and adversarial-based domain adaptation techniques to tackle challenges.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">M.Sc. in Electrical Engineering - Control</p>
+                        <p class="text-md text-gray-300 mt-1">Tarbiat Modares University</p>
+                        <p class="text-sm text-cyan-400 mt-1">Sep. 2015 - June 2018</p>
+                        <div class="mt-3 flex justify-between items-center">
+                            <p class="text-gray-400"><span class="font-semibold text-gray-300">Thesis:</span> Design and Implementation of an Arduino-Based Wireless Communication...</p>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                         <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the M.Sc. thesis abstract. Details & challenges: Designing and constructing an online and wireless data acquisition system using multiple sensors and Arduino. Simulating and introducing multiple fault scenarios, including impeller, bearing, and rotor faults. Employing advanced feature extraction and machine learning techniques for a precise and reliable diagnosis.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">B.Sc. in Electrical Engineering - Telecommunications</p>
+                        <p class="text-md text-gray-300 mt-1">Shahid Beheshti University</p>
+                        <p class="text-sm text-cyan-400 mt-1">Sep. 2010 - Feb. 2015</p>
+                         <div class="mt-3 flex justify-between items-center">
+                            <p class="text-gray-400"><span class="font-semibold text-gray-300">Thesis:</span> Analysis and Design of High-Frequency and High-Temperature Oscillators.</p>
+                             <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">
+                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
+                            <p>This is a placeholder for the B.Sc. thesis abstract.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Skills</h2>
+                <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fab fa-python text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Python</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fab fa-docker text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Docker</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fab fa-aws text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">AWS</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fas fa-brain text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Pytorch</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fas fa-robot text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Tensorflow</span>
+                    </div>
+                     <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fas fa-cogs text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Scikit-learn</span>
+                    </div>
+                     <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fas fa-link text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">LangChain</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fas fa-database text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">SQL</span>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
+                        <i class="fab fa-git-alt text-5xl text-cyan-400"></i>
+                        <span class="mt-3 font-semibold">Git</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Posts Section -->
+            <section id="blog" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Blog Posts</h2>
+                <div class="mt-8 space-y-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300">
+                        <p class="text-gray-400">This section is a placeholder. You can add your blog posts here.</p>
+                        <h3 class="text-2xl font-bold text-white mt-2">Example Blog Post Title</h3>
+                        <p class="mt-3 text-gray-400 leading-relaxed">A summary of the blog post goes here. This text can serve as an introduction to entice the reader to click the link and read more.</p>
+                        <a href="#" class="inline-block mt-4 text-cyan-400 hover:text-cyan-300 font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Me Section -->
+            <section id="contact" class="content-section">
+                <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Contact Me</h2>
+                <p class="mt-6 text-lg">
+                    Feel free to reach out! You can find me on the following platforms:
+                </p>
+                <div class="flex space-x-6 mt-6 text-4xl">
+                    <a href="https://github.com/kavianpour" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kavianpour/" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:kavianpour.tmu@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="text-center py-8 text-sm text-gray-500 border-t border-gray-800 mt-12">
+        <p>&copy; 2025 Mohammadreza Kavianpour. All rights reserved.</p>
+        <p>Made with ❤️ and Tailwind CSS</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Tab Navigation Logic ---
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+            const contentSections = document.querySelectorAll('.content-section');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function switchTab(targetId) {
+                contentSections.forEach(section => section.style.display = 'none');
+                const targetSection = document.getElementById(targetId);
+                if(targetSection) {
+                    targetSection.style.display = 'block';
+                }
+                document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(navLink => {
+                    navLink.classList.toggle('active', navLink.getAttribute('data-target') === targetId);
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    switchTab(this.getAttribute('data-target'));
+                    if(mobileMenu.classList.contains('block')) {
+                       mobileMenu.classList.replace('block', 'hidden');
+                    }
+                });
+            });
+
+            // --- Mobile Menu Toggle ---
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('block');
+            });
+
+            // --- Abstract Toggle Logic ---
+            document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const abstractContent = button.parentElement.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    
+                    abstractContent.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
