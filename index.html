@@ -192,20 +192,19 @@
                         </div>
                     </div>
                     <!-- Publication 2 -->
-                    <div class="bg-gray-800 p-5 rounded-lg">
-                        <p class="font-bold text-lg text-white" data-id="title">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
-                        <p class="text-sm text-gray-400 mt-1" data-id="authors"><span class="font-semibold text-gray-300">Mohammadreza Kavianpour</span>, Parisa Kavianpour, Amin Ramezani, Mohammad TH Beheshti</p>
-                        <p class="text-sm text-cyan-400 mt-1"><em>Submitted to Measurement (Under Review), Elsevier, 2025</em></p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold" target="_blank">
-                                <i class="fas fa-link mr-2"></i>Article Link
-                            </a>
-                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
-                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
-                            </button>
-                        </div>
-                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
-                            <p>This is a placeholder for the abstract. You can replace this text with the actual abstract of your publication.</p>
+                    <div class="bg-gray-800 p-5 rounded-lg flex flex-col md:flex-row gap-6">
+                        <img src="https://placehold.co/150x150/1F2937/4DD0E1?text=Paper+2" alt="Physics-Informed Deep Learning Framework" class="w-full md:w-36 h-auto md:h-36 rounded-md object-cover">
+                        <div class="flex-grow">
+                            <p class="font-bold text-lg text-white">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
+                            <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
+                            <p class="text-sm text-cyan-400 mt-1"><em>Measurement, Elsevier, 2025</em></p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0263224125022493" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                                <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                            </div>
+                            <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                                <p>Real-world bearing fault diagnosis faces challenges due to lack of access to labeled data and missing or incomplete samples for certain faulty classes, requiring generated data and methods to mitigate imbalanced class distributions and partial-set problems. To address these challenges, we propose a novel physics-informed deep learning framework using a physics-informed synthetic data generation method with an augmented weighted hybrid domain adaptation approach that combines adversarial training with a novel Multi-Kernel Maximum Mean Squared Discrepancy (MK-MMSD) metric. Unlike traditional Domain adaptation method, MK-MMSD considers both the mean and variance of data distributions to effectively bridge the domain gap between synthetic and real unlabeled data. Furthermore, we propose a self-adaptive multi-weight block to address the partial-set problem and a novel re-balanced feature Mixup (RF-Mixup) technique to mitigate imbalanced class distributions. Experimental results on the CWRU and JNU datasets demonstrate the effectiveness of our approach in overcoming these real-world challenges in bearing fault diagnosis.</p>
+                            </div>
                         </div>
                     </div>
                      <!-- Publication 3 -->
@@ -444,6 +443,7 @@
 
 </body>
 </html>
+
 
 
 
