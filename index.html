@@ -16,6 +16,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     
+    <!-- Google Analytics - START -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J5C77H0CC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0J5C77H0CC');
+    </script>
+    <!-- Google Analytics - END -->
+
     <style>
         /* Custom styles */
         body {
@@ -43,6 +55,13 @@
         }
         .content-section {
             animation: fadeIn 0.5s ease-in-out;
+        }
+        .skill-logo {
+            filter: grayscale(100%) brightness(1.5);
+            transition: filter 0.3s ease-in-out;
+        }
+        .skill-logo:hover {
+            filter: grayscale(0%) brightness(1);
         }
     </style>
 </head>
@@ -174,54 +193,154 @@
             <!-- Publications Section -->
             <section id="publications" class="content-section">
                 <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Publications</h2>
-                <div class="mt-8 space-y-6">
+                
+                <h3 class="text-2xl font-bold text-white mt-10 mb-6">Journal Papers</h3>
+                <div class="space-y-6">
                     <!-- Publication 1 -->
-                    <div class="bg-gray-800 p-5 rounded-lg flex flex-col md:flex-row gap-6">
-                        <img src="https://placehold.co/150x150/1F2937/4DD0E1?text=Paper+1" alt="Publication Figure" class="w-full md:w-36 h-auto md:h-36 rounded-md object-cover">
-                        <div class="flex-grow">
-                            <p class="font-bold text-lg text-white">Knowledge Distillation and Enhanced Subdomain Adaptation Using Graph Convolutional Network for Resource-Constrained Fault Diagnosis</p>
-                            <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
-                            <p class="text-sm text-cyan-400 mt-1"><em>Knowledge-Based Systems, Elsevier, 2025</em></p>
-                            <div class="mt-4 flex justify-between items-center">
-                                <a href="https://www.sciencedirect.com/science/article/pii/S0950705125012924" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
-                                <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
-                            </div>
-                            <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
-                                <p>Bearing fault diagnosis under varying working conditions faces challenges, including lack of labeled data, distribution discrepancies, and resource constraints. To address these issues, we propose a progressive knowledge distillation framework that transfers knowledge from a complex teacher model, utilizing a Graph Convolutional Network (GCN) with Autoregressive moving average (ARMA) filters, to a compact and efficient student model. To mitigate distribution discrepancies and labeling uncertainty, we introduce Enhanced Local Maximum Mean Square Discrepancy (ELMMSD), which leverages mean and variance statistics in the Reproducing Kernel Hilbert Space (RKHS) and incorporates a priori probability distributions between labels. This approach increases the distance between clustering centers, bridges subdomain gaps, and enhances subdomain alignment reliability. Experimental results on benchmark datasets (CWRU and JNU) demonstrate that the proposed method achieves superior diagnostic accuracy while significantly reducing computational costs. Comprehensive ablation studies validate the effectiveness of each component, highlighting the robustness and adaptability of the approach across diverse working conditions.</p>
-                            </div>
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Knowledge Distillation and Enhanced Subdomain Adaptation Using Graph Convolutional Network for Resource-Constrained Fault Diagnosis</p>
+                        <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Knowledge-Based Systems, Elsevier, 2025</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0950705125012924" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Bearing fault diagnosis under varying working conditions faces challenges, including lack of labeled data, distribution discrepancies, and resource constraints. To address these issues, we propose a progressive knowledge distillation framework that transfers knowledge from a complex teacher model to a compact student model. To mitigate distribution discrepancies and labeling uncertainty, we introduce Enhanced Local Maximum Mean Square Discrepancy (ELMMSD). Experimental results demonstrate that the proposed method achieves superior diagnostic accuracy while significantly reducing computational costs.</p>
                         </div>
                     </div>
                     <!-- Publication 2 -->
-                    <div class="bg-gray-800 p-5 rounded-lg flex flex-col md:flex-row gap-6">
-                        <img src="https://placehold.co/150x150/1F2937/4DD0E1?text=Paper+2" alt="Physics-Informed Deep Learning Framework" class="w-full md:w-36 h-auto md:h-36 rounded-md object-cover">
-                        <div class="flex-grow">
-                            <p class="font-bold text-lg text-white">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
-                            <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
-                            <p class="text-sm text-cyan-400 mt-1"><em>Measurement, Elsevier, 2025</em></p>
-                            <div class="mt-4 flex justify-between items-center">
-                                <a href="https://www.sciencedirect.com/science/article/pii/S0263224125022493" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
-                                <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
-                            </div>
-                            <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
-                                <p>Real-world bearing fault diagnosis faces challenges due to lack of access to labeled data and missing or incomplete samples for certain faulty classes, requiring generated data and methods to mitigate imbalanced class distributions and partial-set problems. To address these challenges, we propose a novel physics-informed deep learning framework using a physics-informed synthetic data generation method with an augmented weighted hybrid domain adaptation approach that combines adversarial training with a novel Multi-Kernel Maximum Mean Squared Discrepancy (MK-MMSD) metric. Unlike traditional Domain adaptation method, MK-MMSD considers both the mean and variance of data distributions to effectively bridge the domain gap between synthetic and real unlabeled data. Furthermore, we propose a self-adaptive multi-weight block to address the partial-set problem and a novel re-balanced feature Mixup (RF-Mixup) technique to mitigate imbalanced class distributions. Experimental results on the CWRU and JNU datasets demonstrate the effectiveness of our approach in overcoming these real-world challenges in bearing fault diagnosis.</p>
-                            </div>
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
+                        <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Measurement, Elsevier, 2025</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0263224125022493" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Real-world bearing fault diagnosis faces challenges due to lack of access to labeled data and missing samples. We propose a novel physics-informed deep learning framework using synthetic data generation and a hybrid domain adaptation approach that combines adversarial training with a novel Multi-Kernel Maximum Mean Squared Discrepancy (MK-MMSD) metric. Experimental results on the CWRU and JNU datasets demonstrate the effectiveness of our approach in overcoming these real-world challenges.</p>
                         </div>
                     </div>
-                     <!-- Publication 3 -->
+                    <!-- Publication 3 -->
                     <div class="bg-gray-800 p-5 rounded-lg">
-                        <p class="font-bold text-lg text-white" data-id="title">A Class Alignment Method Based on Graph Convolution Neural Network for Bearing Fault Diagnosis in the presence of Missing Data and Changing Working Conditions</p>
-                        <p class="text-sm text-gray-400 mt-1" data-id="authors"><span class="font-semibold text-gray-300">Mohammadreza Kavianpour</span>, Amin Ramezani, Mohammad TH Beheshti</p>
+                        <p class="font-bold text-lg text-white">A Class Alignment Method Based on Graph Convolution Neural Network for Bearing Fault Diagnosis in the presence of Missing Data and Changing Working Conditions</p>
+                        <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, A. Ramezani, M. TH Beheshti</p>
                         <p class="text-sm text-cyan-400 mt-1"><em>Measurement, Elsevier, 2022</em></p>
                         <div class="mt-4 flex justify-between items-center">
-                            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold" target="_blank">
-                                <i class="fas fa-link mr-2"></i>Article Link
-                            </a>
-                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
-                                Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i>
-                            </button>
+                            <a href="https://doi.org/10.1016/j.measurement.2022.111817" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
                         </div>
-                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400">
-                            <p>This is a placeholder for the abstract. You can replace this text with the actual abstract of your publication.</p>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder: This paper introduces a novel method for bearing fault diagnosis using Graph Convolutional Networks, specifically designed to handle challenges like missing data and variable operating conditions, enhancing diagnostic reliability in industrial applications.</p>
+                        </div>
+                    </div>
+                    <!-- Publication 4 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Spatial Graph Convolutional Neural Network via Structured Sub-domain Adaptation and Domain Adversarial Learning for Bearing Fault Diagnosis</p>
+                        <p class="text-sm text-gray-400 mt-1">M. Ghorvei, <span class="font-semibold text-gray-300">M. Kavianpour</span>, M. TH Beheshti, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Neurocomputing, Elsevier, 2023</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1016/j.neucom.2023.126485" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder: This work proposes a Spatial Graph Convolutional Neural Network (SGCNN) combined with domain adaptation techniques to improve bearing fault diagnosis under varying operational loads and conditions, achieving high accuracy by effectively aligning feature distributions.</p>
+                        </div>
+                    </div>
+                    <!-- Publication 5 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">A CNN-BILSTM Model with Attention Mechanism for Earthquake Prediction</p>
+                        <p class="text-sm text-gray-400 mt-1">P. Kavianpour, <span class="font-semibold text-gray-300">M. Kavianpour</span>, E. Jahani, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>The Journal of Supercomputing, Springer, 2023</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1007/s11227-023-05423-7" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder: This study presents a hybrid deep learning model combining CNN and Bi-LSTM with an attention mechanism to effectively predict earthquakes by learning spatial and temporal features from seismic data, showing promising results in forecasting seismic events.</p>
+                        </div>
+                    </div>
+                    <!-- Publication 6 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">An unsupervised bearing fault diagnosis based on deep subdomain adaptation under noise and variable load conditions</p>
+                        <p class="text-sm text-gray-400 mt-1">M. Ghorvei, <span class="font-semibold text-gray-300">M. Kavianpour</span>, M. TH Beheshti, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>Measurement Science and Technology, IOPscience, 2021</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1088/1361-6501/ac2be3" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder: We introduce an unsupervised domain adaptation method for bearing fault diagnosis that is robust to noise and variable loads, using deep subdomain adaptation to align feature distributions without requiring labeled target data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6">Conference Papers</h3>
+                <div class="space-y-6">
+                    <!-- Conference Paper 1 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">An Intelligent Gearbox Fault Diagnosis under Different Operating Conditions using Adversarial Domain Adaptation</p>
+                        <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, M. Ghorvei, P. Kavianpour, A. Ramezani, M. TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>8th International Conference on Control, Instrumentation and Automation (ICCIA), IEEE, 2022</em></p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1109/ICCIA57463.2022.9998492" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder for this conference paper. You can replace this with the actual abstract.</p>
+                        </div>
+                    </div>
+                    <!-- Conference Paper 2 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Synthetic to Real Framework based on Convolutional Multi-Head Attention and Hybrid Domain Alignment for Bearing Fault Diagnosis</p>
+                        <p class="text-sm text-gray-400 mt-1">M. Ghorvei, <span class="font-semibold text-gray-300">M. Kavianpour</span>, M. TH Beheshti, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>8th International Conference on Control, Instrumentation and Automation (ICCIA), IEEE, 2022</em></p>
+                         <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1109/ICCIA57463.2022.9998485" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder for this conference paper. You can replace this with the actual abstract.</p>
+                        </div>
+                    </div>
+                    <!-- Conference Paper 3 -->
+                     <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Deep Multi-scale Dilated Convolution Neural Network with Attention Mechanism: A Novel Method for Earthquake Magnitude Classification</p>
+                        <p class="text-sm text-gray-400 mt-1">P. Kavianpour, <span class="font-semibold text-gray-300">M. Kavianpour</span>, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>8th International Conference on Signal Processing and Intelligent Systems (ICSPIS), IEEE, 2022</em></p>
+                         <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1109/ICSPIS57292.2022.10065094" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder for this conference paper. You can replace this with the actual abstract.</p>
+                        </div>
+                    </div>
+                     <!-- Conference Paper 4 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Intelligent Fault Diagnosis of Rolling Bearing Based on Deep Transfer Learning Using Time-Frequency Representation</p>
+                        <p class="text-sm text-gray-400 mt-1"><span class="font-semibold text-gray-300">M. Kavianpour</span>, M. Ghorvei, A. Ramezani, M. TH Beheshti</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>7th International Conference on Signal Processing and Intelligent Systems (ICSPIS), IEEE, 2021</em></p>
+                         <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1109/ICSPIS54004.2021.9703444" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder for this conference paper. You can replace this with the actual abstract.</p>
+                        </div>
+                    </div>
+                    <!-- Conference Paper 5 -->
+                    <div class="bg-gray-800 p-5 rounded-lg">
+                        <p class="font-bold text-lg text-white">Earthquake Magnitude Prediction using Spatia-temporal Features Learning Based on Hybrid CNN-BILSTM Model</p>
+                        <p class="text-sm text-gray-400 mt-1">P. Kavianpour, <span class="font-semibold text-gray-300">M. Kavianpour</span>, E. Jahani, A. Ramezani</p>
+                        <p class="text-sm text-cyan-400 mt-1"><em>7th International Conference on Signal Processing and Intelligent Systems (ICSPIS), IEEE, 2021</em></p>
+                         <div class="mt-4 flex justify-between items-center">
+                            <a href="https://doi.org/10.1109/ICSPIS54004.2021.9703447" class="text-cyan-400 hover:text-cyan-300 font-semibold text-sm" target="_blank"><i class="fas fa-link mr-2"></i>Article Link</a>
+                            <button class="toggle-abstract-btn text-cyan-400 hover:text-cyan-300 font-semibold flex items-center text-sm">Read Abstract <i class="fas fa-chevron-down ml-2 transform transition-transform duration-300"></i></button>
+                        </div>
+                        <div class="abstract-content hidden mt-4 pt-4 border-t border-gray-700 text-gray-400 text-sm leading-relaxed">
+                            <p>Abstract placeholder for this conference paper. You can replace this with the actual abstract.</p>
                         </div>
                     </div>
                 </div>
@@ -231,6 +350,7 @@
             <section id="projects" class="content-section">
                 <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Projects</h2>
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-white">Conversational Chatbot (LLM & RAG)</h3>
@@ -242,6 +362,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Project 2 -->
                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-white">IoT-based Calving Time Prediction</h3>
@@ -253,6 +374,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Project 3 -->
                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-white">Digital Twin Traffic Management</h3>
@@ -262,6 +384,65 @@
                                 <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI</span>
                                 <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Aimsun</span>
                                 <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">SUMO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Ship Fuel Consumption Prediction</h3>
+                            <p class="mt-3 text-gray-400">Developed AI solutions for ship fuel prediction and route/speed optimization, aligning with IMO emission policies to improve efficiency and compliance.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">AI</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Maritime</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Earthquake Prediction Modeling</h3>
+                            <p class="mt-3 text-gray-400">Researched and developed a CNN-BILSTM model with an attention mechanism for earthquake prediction, leading to multiple peer-reviewed publications.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Deep Learning</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CNN-LSTM</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Attention</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Hybrid Recommendation System</h3>
+                            <p class="mt-3 text-gray-400">Created a hybrid recommendation system combining collaborative filtering and content-based methods to significantly boost user engagement on digital platforms.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                               <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Collaborative Filtering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Personalized Exercise Plan Generator</h3>
+                            <p class="mt-3 text-gray-400">Designed and implemented a personalized weekly exercise plan generator using LangChain and the OpenAI API to deliver custom fitness routines.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LLM</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LangChain</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">OpenAI API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 8 -->
+                     <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Fine-Tuning LLMs for Specific Tasks</h3>
+                            <p class="mt-3 text-gray-400">Fine-tuned and optimized models like LLaMA for sentiment analysis and FLAN-T5 for text summarization to achieve state-of-the-art performance on specific tasks.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Fine-Tuning</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">LLaMA</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">FLAN-T5</span>
                             </div>
                         </div>
                     </div>
@@ -320,42 +501,108 @@
             <!-- Skills Section -->
             <section id="skills" class="content-section">
                 <h2 class="text-4xl font-bold text-white border-b-4 border-cyan-500 pb-2 inline-block">Skills</h2>
-                <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fab fa-python text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Python</span>
+                
+                <h3 class="text-2xl font-bold text-white mt-10 mb-6">Key Technologies & Frameworks</h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+                    <!-- Python -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/python/9CA3AF" alt="Python" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">Python</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fab fa-docker text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Docker</span>
+                    <!-- PyTorch -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/pytorch/9CA3AF" alt="PyTorch" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">PyTorch</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fab fa-aws text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">AWS</span>
+                    <!-- TensorFlow -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/tensorflow/9CA3AF" alt="TensorFlow" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">TensorFlow</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fas fa-brain text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Pytorch</span>
+                    <!-- Hugging Face -->
+                     <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/huggingface/9CA3AF" alt="Hugging Face" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">Hugging Face</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fas fa-robot text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Tensorflow</span>
+                    <!-- Scikit-learn -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/scikitlearn/9CA3AF" alt="Scikit-learn" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">Scikit-learn</span>
                     </div>
-                     <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fas fa-cogs text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Scikit-learn</span>
+                    <!-- LangChain -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/langchain/9CA3AF" alt="LangChain" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">LangChain</span>
                     </div>
-                     <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fas fa-link text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">LangChain</span>
+                    <!-- Docker -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/docker/9CA3AF" alt="Docker" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">Docker</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fas fa-database text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">SQL</span>
+                    <!-- AWS -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/amazonaws/9CA3AF" alt="AWS" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">AWS</span>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-center flex-col shadow-md">
-                        <i class="fab fa-git-alt text-5xl text-cyan-400"></i>
-                        <span class="mt-3 font-semibold">Git</span>
+                    <!-- Git -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/git/9CA3AF" alt="Git" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">Git</span>
+                    </div>
+                     <!-- SQL -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://cdn.simpleicons.org/postgresql/9CA3AF" alt="SQL" class="w-16 h-16 skill-logo">
+                        <span class="mt-3 font-semibold text-gray-300">SQL</span>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mt-16 mb-6">Areas of Expertise</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- AI & Machine Learning -->
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold text-white mb-4">AI & Machine Learning</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Deep Learning</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Graph Neural Networks</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Time-Series Analysis</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Transfer Learning</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Domain Adaptation</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Recommendation Systems</span>
+                        </div>
+                    </div>
+                    <!-- Natural Language Processing -->
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold text-white mb-4">Natural Language Processing</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Large Language Models (LLM)</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">RAG</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Prompt Engineering</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Transformers</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">NLTK & spaCy</span>
+                        </div>
+                    </div>
+                    <!-- Programming & DevOps -->
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold text-white mb-4">Programming & DevOps</h4>
+                        <div class="flex flex-wrap gap-2">
+                             <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">MATLAB</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">AWS</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Git</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">RESTful API</span>
+                        </div>
+                    </div>
+                    <!-- IoT & Other Skills -->
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold text-white mb-4">IoT & Other Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Arduino</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Sensors & Data Acquisition</span>
+                            <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Wireless Communication</span>
+                             <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">LaTex</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -431,11 +678,16 @@
             // --- Abstract Toggle Logic ---
             document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
                 button.addEventListener('click', () => {
-                    const abstractContent = button.parentElement.nextElementSibling;
+                    // Find the abstract content related to THIS button
+                    const abstractContent = button.closest('.bg-gray-800').querySelector('.abstract-content');
                     const icon = button.querySelector('i');
                     
-                    abstractContent.classList.toggle('hidden');
-                    icon.classList.toggle('rotate-180');
+                    if (abstractContent) {
+                        abstractContent.classList.toggle('hidden');
+                    }
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
                 });
             });
         });
@@ -443,8 +695,4 @@
 
 </body>
 </html>
-
-
-
-
 
