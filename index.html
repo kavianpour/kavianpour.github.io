@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammadreza Kavianpour | AI Research Scientist</title>
 
-    <meta name="description" content="Mohammadreza Kavianpour — AI Research Scientist with a Ph.D. in Electrical Engineering. Research and applied work in machine learning, deep learning, graph neural networks, and large language models, with publications in leading journals and industrial experience across maritime, healthcare, and transportation.">
+    <meta name="description" content="Mohammadreza Kavianpour — AI Research Scientist with a Ph.D. in Electrical Engineering. Research and applied work in machine learning, deep learning, graph neural networks, and large language models, with publications in leading journals and industrial experience across maritime energy, precision livestock farming, and industrial condition monitoring.">
     <meta name="author" content="Mohammadreza Kavianpour">
     <link rel="canonical" href="https://kavianpour.github.io/">
 
@@ -38,7 +38,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Mohammadreza Kavianpour",
-      "jobTitle": "AI Research Scientist",
+      "jobTitle": "Senior AI Research Scientist",
       "url": "https://kavianpour.github.io/",
       "image": "https://kavianpour.github.io/images/12.jpg",
       "email": "mailto:kavianpour.tmu@gmail.com",
@@ -46,7 +46,7 @@
         { "@type": "CollegeOrUniversity", "name": "Tarbiat Modares University" },
         { "@type": "CollegeOrUniversity", "name": "Shahid Beheshti University" }
       ],
-      "knowsAbout": ["Machine Learning", "Deep Learning", "Graph Neural Networks", "Large Language Models", "Time-Series Analysis", "Domain Adaptation"],
+      "knowsAbout": ["Machine Learning", "Deep Learning", "Graph Neural Networks", "Physics-Informed Machine Learning", "Domain Adaptation", "Knowledge Distillation", "Model Compression", "Digital Twins", "Time-Series Analysis", "Large Language Models"],
       "sameAs": [
         "https://www.linkedin.com/in/kavianpour/",
         "https://scholar.google.com/citations?hl=en&user=FwS-5c0AAAAJ",
@@ -304,6 +304,7 @@
                 <a href="#publications" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Publications</a>
                 <a href="#experience" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Experience</a>
                 <a href="#projects" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Projects</a>
+                <a href="#opensource" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Open Source</a>
                 <a href="#education" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Education</a>
                 <a href="#skills" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Skills</a>
                 <a href="#more" class="nav-link py-2 px-3 rounded-md text-sm transition-colors">Awards &amp; Service</a>
@@ -322,6 +323,7 @@
             <a href="#publications" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Publications</a>
             <a href="#experience" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Experience</a>
             <a href="#projects" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Projects</a>
+            <a href="#opensource" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Open Source</a>
             <a href="#education" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Education</a>
             <a href="#skills" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Skills</a>
             <a href="#more" class="nav-link-mobile block py-3 px-6 hover:bg-white/5 transition-colors">Awards &amp; Service</a>
@@ -346,9 +348,11 @@
                         AI Research Scientist
                     </h2>
                     <p class="hero-anim d4 text-lg text-slate-300 leading-relaxed mt-6 max-w-2xl">
-                        I build machine learning solutions that turn complex research into real-world impact —
-                        from deep learning and graph neural networks to large language models, applied across
-                        maritime, healthcare, transportation, and industrial systems.
+                        I build machine learning that stays reliable when deployment conditions violate training
+                        assumptions — sensor channels drop out, operating regimes shift, simulated signals diverge from
+                        measured ones, and target hardware is far smaller than the trained model. I work through graph
+                        representation learning, physics-informed modeling, domain adaptation, and model compression,
+                        and I validate on operating systems rather than benchmarks alone.
                     </p>
                     <div class="hero-anim d5 flex flex-wrap gap-4 mt-8">
                         <a href="#publications" class="btn-primary font-semibold px-6 py-3 rounded-lg">
@@ -389,7 +393,7 @@
             <!-- Stats bar -->
             <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
                 <div class="card p-6 text-center">
-                    <p class="text-4xl font-extrabold gradient-text font-display" data-count="561" data-suffix="+">0</p>
+                    <p class="text-4xl font-extrabold gradient-text font-display" data-count="600" data-suffix="+">0</p>
                     <p class="text-sm text-slate-400 mt-2">Citations</p>
                 </div>
                 <div class="card p-6 text-center">
@@ -401,8 +405,8 @@
                     <p class="text-sm text-slate-400 mt-2">i10-index</p>
                 </div>
                 <div class="card p-6 text-center">
-                    <p class="text-4xl font-extrabold gradient-text font-display" data-count="11" data-suffix="+">0</p>
-                    <p class="text-sm text-slate-400 mt-2">Publications</p>
+                    <p class="text-4xl font-extrabold gradient-text font-display" data-count="11">0</p>
+                    <p class="text-sm text-slate-400 mt-2">Peer-Reviewed Papers</p>
                 </div>
             </div>
             <p class="reveal text-xs text-slate-500 text-center mt-3">
@@ -428,16 +432,18 @@
                         grounded in real data and measurable outcomes.
                     </p>
                     <p>
-                        During my Ph.D., I advanced this direction with graph neural networks and physics-informed methods to
-                        tackle noisy, incomplete, and shifting data — resulting in several papers in leading journals. In
-                        parallel, I collaborated on applying deep learning to earthquake prediction, which broadened my
-                        research across scientific domains.
+                        During my Ph.D., I advanced this direction with graph neural networks, physics-informed learning, and
+                        adversarial domain adaptation, targeting noisy, incomplete, and shifting data — resulting in papers in
+                        <em>Measurement</em>, <em>Knowledge-Based Systems</em>, and <em>Neurocomputing</em>. In parallel, I
+                        collaborated on deep learning for earthquake prediction, a three-paper line on which I was corresponding
+                        author.
                     </p>
                     <p>
-                        I have since carried this focus into industry: leading an AI platform for livestock health monitoring,
-                        engineering predictive models for maritime fuel and route optimization, and developing LLM- and
-                        RAG-based conversational systems. I am now seeking a postdoctoral position where I can apply machine
-                        learning to meaningful, interdisciplinary challenges.
+                        I have since carried this focus into industry: a physics-constrained digital twin for fleet fuel
+                        optimization in maritime shipping, an accelerometer-based health-monitoring system for dairy cattle, and a
+                        retrieval-augmented assistant deployed inside a live legal and regulatory workflow. Alongside the papers, I
+                        release the code and data that sit underneath them. I am now seeking a postdoctoral position where I can
+                        apply this work to meaningful, interdisciplinary problems.
                     </p>
                 </div>
                 <div>
@@ -447,17 +453,21 @@
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Large Language Models</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Graph Neural Networks</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Physics-Informed Neural Networks</span>
-                        <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Multimodal Learning</span>
+                        <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Knowledge Distillation &amp; Compression</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Time-Series Analysis</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Domain Adaptation</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">AI for Sustainability</span>
                         <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Prognosis &amp; Health Management</span>
+                        <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Digital Twins</span>
+                        <span class="chip text-xs font-medium px-3 py-1.5 rounded-full">Reproducible ML &amp; Open Data</span>
                     </div>
                     <h3 class="text-lg font-semibold text-white mt-8 mb-4">News &amp; Updates</h3>
                     <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Two first-author review articles <span class="text-cyan-300">in preparation</span>, on data-driven fuel models for ship routing and on decision-centric machine learning for dairy-cattle health events.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Released <span class="text-cyan-300">seven MIT-licensed Python packages</span> for reproducible benchmark, maritime, and environmental data.</span></li>
                         <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>New paper published in <span class="text-cyan-300">Knowledge-Based Systems</span> on knowledge distillation and subdomain adaptation.</span></li>
                         <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>New paper published in <span class="text-cyan-300">Measurement</span> on physics-informed domain adaptation.</span></li>
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Our CNN-BiLSTM earthquake-prediction paper surpassed <span class="text-cyan-300">200+ citations</span>.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Our earthquake-prediction paper passed <span class="text-cyan-300">220 citations</span>.</span></li>
                     </ul>
                 </div>
             </div>
@@ -474,6 +484,7 @@
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
                         <span class="chip text-xs font-semibold px-2.5 py-0.5 rounded-full">Q1 · IF 7.6</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">8 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">Knowledge Distillation and Enhanced Subdomain Adaptation Using Graph Convolutional Network for Resource-Constrained Fault Diagnosis</p>
                     <p class="text-sm text-slate-400 mt-1"><span class="font-semibold text-slate-200">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. T. H. Beheshti</p>
@@ -502,6 +513,7 @@
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
                         <span class="chip text-xs font-semibold px-2.5 py-0.5 rounded-full">Q1 · IF 5.6</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">14 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">A Partial-Imbalance Robust Domain Adaptation Framework for Bearing Fault Diagnosis Using Physics-Informed Deep Learning</p>
                     <p class="text-sm text-slate-400 mt-1"><span class="font-semibold text-slate-200">M. Kavianpour</span>, P. Kavianpour, A. Ramezani, M. T. H. Beheshti</p>
@@ -531,7 +543,7 @@
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
                         <span class="chip text-xs font-semibold px-2.5 py-0.5 rounded-full">Q1 · IF 5.6</span>
-                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">65+ citations</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">75 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">A Class Alignment Method Based on Graph Convolution Neural Network for Bearing Fault Diagnosis in the Presence of Missing Data and Changing Working Conditions</p>
                     <p class="text-sm text-slate-400 mt-1"><span class="font-semibold text-slate-200">M. Kavianpour</span>, A. Ramezani, M. T. H. Beheshti</p>
@@ -559,7 +571,7 @@
                 <!-- Journal 4 -->
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">200+ citations</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">220 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">A CNN-BiLSTM Model with Attention Mechanism for Earthquake Prediction</p>
                     <p class="text-sm text-slate-400 mt-1">P. Kavianpour, <span class="font-semibold text-slate-200">M. Kavianpour</span>, E. Jahani, A. Ramezani</p>
@@ -586,7 +598,7 @@
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
                         <span class="chip text-xs font-semibold px-2.5 py-0.5 rounded-full">Q1 · IF 6.5</span>
-                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">140+ citations</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">150 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">Spatial Graph Convolutional Neural Network via Structured Subdomain Adaptation and Domain Adversarial Learning for Bearing Fault Diagnosis</p>
                     <p class="text-sm text-slate-400 mt-1">M. Ghorvei, <span class="font-semibold text-slate-200">M. Kavianpour</span>, M. T. H. Beheshti, A. Ramezani</p>
@@ -612,7 +624,7 @@
                 <!-- Journal 6 -->
                 <div class="card p-6">
                     <div class="flex flex-wrap items-center gap-2 mb-2">
-                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">40+ citations</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">48 citations</span>
                     </div>
                     <p class="font-semibold text-lg text-white">An Unsupervised Bearing Fault Diagnosis Based on Deep Subdomain Adaptation Under Noise and Variable Load Conditions</p>
                     <p class="text-sm text-slate-400 mt-1">M. Ghorvei, <span class="font-semibold text-slate-200">M. Kavianpour</span>, M. T. H. Beheshti, A. Ramezani</p>
@@ -684,6 +696,28 @@
                     </div>
                 </div>
             </div>
+
+            <h3 class="text-xl font-semibold text-white mt-14 mb-6 flex items-center"><i class="fas fa-pen-nib text-cyan-400 mr-3"></i>In Preparation</h3>
+            <div class="space-y-5">
+                <div class="card p-6">
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">In preparation</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">Review article</span>
+                    </div>
+                    <p class="font-semibold text-lg text-white">Learned Objectives, Uncertain Routes: A Critical Review of the Coupling Between Data-Driven Fuel Models and Ship Route Optimization</p>
+                    <p class="text-sm text-slate-400 mt-1"><span class="font-semibold text-slate-200">M. Kavianpour</span>, et al.</p>
+                    <p class="text-sm text-cyan-400 mt-1"><em>In preparation for Ocean Engineering, Elsevier, 2026</em></p>
+                </div>
+                <div class="card p-6">
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">In preparation</span>
+                        <span class="chip-muted text-xs font-semibold px-2.5 py-0.5 rounded-full">Review article</span>
+                    </div>
+                    <p class="font-semibold text-lg text-white">From Wearable Signals to Actionable Alarms: A Decision-Centric Review of Machine Learning and Optimisation for Behaviour, Calving and Health-Event Detection in Dairy Cattle</p>
+                    <p class="text-sm text-slate-400 mt-1"><span class="font-semibold text-slate-200">M. Kavianpour</span>, et al.</p>
+                    <p class="text-sm text-cyan-400 mt-1"><em>In preparation for Computers and Electronics in Agriculture, Elsevier, 2026</em></p>
+                </div>
+            </div>
         </section>
 
         <!-- ===================== EXPERIENCE ===================== -->
@@ -696,10 +730,13 @@
                         <h3 class="text-xl font-semibold text-white">Senior AI Research Scientist</h3>
                         <span class="text-sm text-cyan-400 font-medium">Jun 2024 – Present</span>
                     </div>
-                    <p class="text-slate-300 font-medium mt-1">Raya Intelligent Process · Tehran, Iran</p>
+                    <p class="text-slate-300 font-medium mt-1">Raya Intelligent Process (Balam Logistics) · Tehran, Iran</p>
+                    <p class="text-xs text-slate-500 mt-1">Maritime AI and energy optimisation</p>
                     <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Architected and deployed an internal GPT-powered conversational assistant using Retrieval-Augmented Generation (RAG) over legal documents and shipping regulations, reducing financial and legal inquiries to specialized departments by 40%.</span></li>
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Built the company's first predictive analytics system for fuel consumption and route optimization from voyage, maritime, and meteorological data — cutting fuel consumption by 14% and carbon emissions by 7%.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Sole architect and developer, across an 18-month programme, of the company's first predictive analytics system for vessel fuel consumption and route optimization, fusing historical and real-time voyage, AIS, and meteorological data.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Introduced a physics-based correction layer that rejects physically infeasible operating points, and a graph-based formulation for fleet-level global optimization.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Evaluated on a controlled pilot across 10 vessels over 15 voyages, the system reduced fuel consumption by 6.5% and CO<sub>2</sub> emissions by 7% relative to the prior operating baseline. Fleet-wide rollout across 50 vessels is scheduled for Q1 2027.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Designed and deployed a Retrieval-Augmented Generation (RAG) assistant over internal legal documents and shipping regulations, reducing routine enquiries to specialist departments by an estimated 30% (internal ticket-volume comparison over six months).</span></li>
                     </ul>
                 </div>
 
@@ -709,21 +746,46 @@
                         <span class="text-sm text-cyan-400 font-medium">Jul 2023 – Apr 2024</span>
                     </div>
                     <p class="text-slate-300 font-medium mt-1">Sarveen Technologies · Tehran, Iran</p>
+                    <p class="text-xs text-slate-500 mt-1">Precision livestock farming</p>
                     <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Led cross-functional development of an AI-powered livestock health-monitoring system, predicting calving times 6 hours in advance with over 74% accuracy and enabling early detection of disease through anomaly detection.</span></li>
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Independently engineered a smart parking-allocation system for two US universities (UC Davis &amp; CSU Sacramento), optimizing lot utilization by role and access permissions with interactive map-based guidance.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Led a cross-functional team of veterinarians and data scientists building a calving-prediction and behavioural anomaly-detection system from neck-mounted accelerometers across 50 animals at 10-minute sampling, with a data-sufficiency rule tolerating up to 50% missing samples per window.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Benchmarked population-level static thresholds (detection probability 0.67 at a false-alarm rate of 0.10) against per-animal dynamic baselines (0.64 at 0.07), cutting false alarms by 30% at comparable sensitivity.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Independently engineered a smart parking-allocation system for two US universities (UC Davis &amp; CSU Sacramento), assigning spaces by role and access permission with interactive map-based guidance.</span></li>
                     </ul>
                 </div>
 
                 <div class="timeline-item">
                     <div class="flex flex-wrap items-baseline justify-between gap-2">
-                        <h3 class="text-xl font-semibold text-white">Lead Researcher</h3>
-                        <span class="text-sm text-cyan-400 font-medium">Sep 2018 – Present</span>
+                        <h3 class="text-xl font-semibold text-white">Affiliated Researcher (part-time)</h3>
+                        <span class="text-sm text-cyan-400 font-medium">Jul 2023 – Present</span>
                     </div>
-                    <p class="text-slate-300 font-medium mt-1">Tarbiat Modares University · Tehran, Iran</p>
+                    <p class="text-slate-300 font-medium mt-1">Control &amp; Intelligent Systems Lab, Tarbiat Modares University · Tehran, Iran</p>
                     <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Conducted research on graph neural networks, physics-informed neural networks, and adversarial learning to address missing data and distribution shifts in real-world dynamic systems.</span></li>
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Supervised and mentored 5 M.Sc. students, resulting in 3 co-authored publications.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Continued graph-based and physics-informed research alongside full-time industry roles; output includes two 2025 journal articles and two first-author review articles now in preparation.</span></li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h3 class="text-xl font-semibold text-white">Researcher &amp; Laboratory Coordinator</h3>
+                        <span class="text-sm text-cyan-400 font-medium">Sep 2015 – Jul 2023</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mt-1">Control &amp; Intelligent Systems Lab, Tarbiat Modares University · Tehran, Iran</p>
+                    <ul class="mt-3 space-y-2 text-sm text-slate-400">
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Research on graph neural networks, physics-informed learning, and adversarial domain adaptation for missing data and distribution shift in dynamic systems.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Laboratory coordination (2016–2022): ran weekly research seminars, onboarded new graduate students, allocated shared computational resources, and coordinated cross-project dependencies for a group of 23 researchers.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Co-supervised five M.Sc. researchers across three research groups, resulting in co-authored peer-reviewed publications, including the group's three most-cited papers.</span></li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <h3 class="text-xl font-semibold text-white">Research Collaborator (remote)</h3>
+                        <span class="text-sm text-cyan-400 font-medium">Sep 2019 – Feb 2022</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mt-1">Seismology &amp; Data Science Group, University of Mazandaran</p>
+                    <ul class="mt-3 space-y-2 text-sm text-slate-400">
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-1">▹</span><span>Inter-institutional collaboration on deep learning for earthquake magnitude prediction and spatio-temporal forecasting; produced two co-authored publications, including the group's most-cited paper.</span></li>
                     </ul>
                 </div>
             </div>
@@ -747,45 +809,67 @@
 
                 <div class="card p-6">
                     <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-ship"></i></div>
-                    <h3 class="text-xl font-semibold text-white">Ship Fuel &amp; Route Optimization</h3>
-                    <p class="mt-2 text-sm text-slate-400">Developed predictive models for ship fuel consumption and route/speed optimization, aligning with IMO emission policies — reducing fuel use by 14% and emissions by 7%.</p>
+                    <h3 class="text-xl font-semibold text-white">Physics-Constrained Digital Twin for Fleet Fuel Optimization</h3>
+                    <p class="mt-2 text-sm text-slate-400">A per-vessel behavioural model driven by live voyage, AIS, and meteorological data, with a physics-based correction layer that rejects infeasible operating points and a graph-based fleet optimizer. Controlled pilot across 10 vessels over 15 voyages: 6.5% less fuel and 7% less CO<sub>2</sub> than the prior operating baseline.</p>
                     <div class="mt-4 flex flex-wrap gap-2">
                         <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Maritime</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Optimization</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Sustainability</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Digital Twin</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Physics-Constrained Optimization</span>
                     </div>
                 </div>
 
                 <div class="card p-6">
                     <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-cow"></i></div>
                     <h3 class="text-xl font-semibold text-white">Livestock Health &amp; Calving Prediction</h3>
-                    <p class="mt-2 text-sm text-slate-400">Built a real-time system for cattle health monitoring and calving-time prediction with over 74% accuracy, issuing alerts 6 hours in advance and flagging early signs of illness.</p>
+                    <p class="mt-2 text-sm text-slate-400">Behavioural anomaly detection from neck-mounted accelerometers across 50 animals, tolerant to 50% missing samples per window. Per-animal dynamic baselines cut false alarms by 30% against population thresholds at comparable detection sensitivity.</p>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">IoT</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Machine Learning</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Time-Series</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Wearable Sensors</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Anomaly Detection</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Alarm-Burden Reduction</span>
                     </div>
                 </div>
 
                 <div class="card p-6">
                     <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-car"></i></div>
-                    <h3 class="text-xl font-semibold text-white">Smart Parking &amp; Traffic Systems</h3>
-                    <p class="mt-2 text-sm text-slate-400">Implemented AI-driven parking allocation and traffic-management systems, optimizing lot utilization and signal control through real-time data analysis and simulation.</p>
+                    <h3 class="text-xl font-semibold text-white">Smart Parking Allocation</h3>
+                    <p class="mt-2 text-sm text-slate-400">Sole engineer on a space-allocation system delivered for two US universities (UC Davis and CSU Sacramento), assigning parking by role and access permission with an interactive guidance map.</p>
                     <div class="mt-4 flex flex-wrap gap-2">
                         <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Transportation</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Optimization</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Simulation</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Resource Allocation</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">End-to-End Delivery</span>
                     </div>
                 </div>
 
                 <div class="card p-6">
                     <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-wave-square"></i></div>
-                    <h3 class="text-xl font-semibold text-white">Earthquake Prediction Modeling</h3>
-                    <p class="mt-2 text-sm text-slate-400">Researched and developed a CNN-BiLSTM model with an attention mechanism for earthquake magnitude and frequency prediction, leading to multiple peer-reviewed publications.</p>
+                    <h3 class="text-xl font-semibold text-white">Earthquake Prediction &amp; Magnitude Classification</h3>
+                    <p class="mt-2 text-sm text-slate-400">Corresponding author on a three-paper line applying deep learning to non-stationary seismic time series for magnitude and frequency prediction, with 256 citations across the line and 220 on the lead paper.</p>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Deep Learning</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">CNN-BiLSTM</span>
-                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Attention</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Non-Stationary Time Series</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Spatio-Temporal Learning</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Forecasting</span>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-diagram-project"></i></div>
+                    <h3 class="text-xl font-semibold text-white">Fault Diagnosis under Missing Data &amp; Domain Shift</h3>
+                    <p class="mt-2 text-sm text-slate-400">Graph convolutional models with class alignment and subdomain adaptation for bearing and gearbox diagnosis when sensor channels drop out and operating conditions change, plus a physics-informed framework that handles partial-set label mismatch, class imbalance, and the gap between simulated and real fault data in one architecture.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Graph Neural Networks</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Domain Adaptation</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Physics-Informed Learning</span>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-compress"></i></div>
+                    <h3 class="text-xl font-semibold text-white">Model Compression for Resource-Constrained Diagnosis</h3>
+                    <p class="mt-2 text-sm text-slate-400">Progressive knowledge distillation from a graph convolutional teacher to a compact student, with an enhanced subdomain-alignment objective. Over 90% compression with under 0.5% accuracy loss, benchmarked against quantisation.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Knowledge Distillation</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Model Compression</span>
+                        <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">Efficient Inference</span>
                     </div>
                 </div>
 
@@ -799,6 +883,44 @@
                         <span class="chip-muted text-xs px-2.5 py-0.5 rounded-full">FLAN-T5</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===================== OPEN SOURCE ===================== -->
+        <section id="opensource" class="py-16 reveal">
+            <h2 class="section-heading text-3xl font-bold text-white">Open Source</h2>
+            <p class="mt-8 max-w-3xl text-slate-300 leading-relaxed">
+                Every one of my eleven published papers ships with a public repository — six code releases and five data
+                and documentation releases — and four journal articles have arXiv preprints. Alongside those, I maintain
+                seven MIT-licensed Python packages that make the data underneath the work reproducible.
+            </p>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="card p-6">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-database"></i></div>
+                    <h3 class="text-xl font-semibold text-white">Machine Health &amp; Seismic Data</h3>
+                    <p class="mt-2 text-sm text-slate-400">Four MIT-licensed Python packages standardising acquisition, integrity checking, and leakage-aware splitting for the benchmark datasets underlying all of my peer-reviewed publications.</p>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="https://github.com/kavianpour/cwru-bearing-toolkit" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>cwru-bearing-toolkit</a></li>
+                        <li><a href="https://github.com/kavianpour/jnu-bearing-toolkit" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>jnu-bearing-toolkit</a></li>
+                        <li><a href="https://github.com/kavianpour/seu-gearbox-toolkit" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>seu-gearbox-toolkit</a></li>
+                        <li><a href="https://github.com/kavianpour/usgs-earthquake-catalog" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>usgs-earthquake-catalog</a></li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <div class="text-cyan-400 text-2xl mb-3"><i class="fas fa-earth-europe"></i></div>
+                    <h3 class="text-xl font-semibold text-white">Maritime &amp; Environmental Data</h3>
+                    <p class="mt-2 text-sm text-slate-400">Three MIT-licensed packages for reproducible geospatial and reanalysis data extraction, with checksums and source provenance: a queryable SQLite port index built from UN/LOCODE, the NGA World Port Index and OpenStreetMap anchorages, and preset-driven, locally validated request tooling for Copernicus Marine and ECMWF ERA5 with unit conversion and provenance manifests.</p>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="https://github.com/kavianpour/global-port-index" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>global-port-index</a></li>
+                        <li><a href="https://github.com/kavianpour/cmems-marine-fetch" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>cmems-marine-fetch</a></li>
+                        <li><a href="https://github.com/kavianpour/era5-marine-fetch" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300"><i class="fab fa-github mr-2"></i>era5-marine-fetch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6">
+                <a href="https://github.com/kavianpour" target="_blank" rel="noopener" class="btn-ghost inline-block font-semibold px-6 py-3 rounded-lg"><i class="fab fa-github mr-2"></i>All repositories</a>
             </div>
         </section>
 
@@ -875,6 +997,9 @@
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Adversarial Training</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Transfer Learning</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Domain Adaptation</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Knowledge Distillation</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Model Compression</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Subdomain Alignment</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Recommendation Systems</span>
                     </div>
                 </div>
@@ -903,11 +1028,36 @@
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">FastAPI</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">RESTful API</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">MySQL</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">SQLite</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">MLflow</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Vector Databases</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Docker</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Git</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">AWS</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">n8n</span>
                         <span class="chip-muted text-sm px-3 py-1 rounded-full">Arduino</span>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold text-white mb-4 flex items-center"><i class="fas fa-wave-square text-cyan-400 mr-3"></i>Signal &amp; Time-Series</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Spectral Analysis</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Wavelet Decomposition</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Time-Frequency Representation</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Non-Stationary Forecasting</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Anomaly Detection</span>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold text-white mb-4 flex items-center"><i class="fas fa-atom text-cyan-400 mr-3"></i>Hybrid Physics-ML &amp; Optimization</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Physics-Informed Neural Networks</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Physics-Constrained Optimization</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Digital Twins</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Multi-Source Data Fusion</span>
+                        <span class="chip-muted text-sm px-3 py-1 rounded-full">Reproducible Data Pipelines</span>
                     </div>
                 </div>
             </div>
@@ -931,14 +1081,19 @@
                 <!-- Service -->
                 <div class="card p-6 lg:col-span-1">
                     <h4 class="text-lg font-semibold text-white mb-4 flex items-center"><i class="fas fa-user-check text-cyan-400 mr-3"></i>Reviewer Service</h4>
-                    <p class="text-xs text-slate-500 mb-3">Scientific reviewer (2022 – present) for:</p>
+                    <p class="text-xs text-slate-500 mb-3">2022 – present · 70+ manuscripts reviewed for 11 journals:</p>
                     <ul class="space-y-2 text-sm text-slate-400">
                         <li>IEEE Transactions on Industrial Informatics</li>
+                        <li>IEEE Transactions on Industrial Electronics</li>
+                        <li>IEEE Transactions on Instrumentation and Measurement</li>
                         <li>Mechanical Systems and Signal Processing</li>
                         <li>Reliability Engineering &amp; System Safety</li>
-                        <li>Expert Systems With Applications</li>
+                        <li>Expert Systems with Applications</li>
+                        <li>Pattern Recognition</li>
                         <li>Neurocomputing</li>
-                        <li>Applied Intelligence</li>
+                        <li>Information Sciences</li>
+                        <li>Applied Soft Computing</li>
+                        <li>Journal of Industrial Information Integration</li>
                     </ul>
                 </div>
 
@@ -946,9 +1101,11 @@
                 <div class="card p-6 lg:col-span-1">
                     <h4 class="text-lg font-semibold text-white mb-4 flex items-center"><i class="fas fa-chalkboard-user text-cyan-400 mr-3"></i>Teaching &amp; Mentoring</h4>
                     <ul class="space-y-3 text-sm text-slate-400">
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Teaching Assistant (2016–2022): Modern Control, Multivariable &amp; Adaptive Control, Fault Diagnosis Systems.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Teaching Assistant (2016–2022): 17 course-sections across five graduate courses, including parallel on-campus and distance-learning cohorts — Modern Control Theory, Optimal Control, Multivariable Control Systems, Adaptive Control, and Fault Diagnosis Systems.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Co-supervised five M.Sc. researchers across three research groups, producing co-authored publications.</span></li>
                         <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Software Instructor, IEEE Iran Section (2018–2020): MATLAB &amp; Python.</span></li>
-                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Course Instructor, Faradars (2017): taught Multivariable Control to 1000+ students.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Course Instructor, Faradars (2017): Multivariable Control, 1,200+ enrolled learners.</span></li>
+                        <li class="flex gap-2"><span class="text-cyan-400 mt-0.5">▹</span><span>Oral presentations: ICSPIS 2021, ICSPIS 2022, ICCIA 2022 (IEEE).</span></li>
                     </ul>
                 </div>
             </div>
@@ -976,7 +1133,7 @@
     </main>
 
     <footer class="text-center py-10 text-sm text-slate-500 border-t border-[#1a2640] mt-8">
-        <p>&copy; 2025 Mohammadreza Kavianpour. All rights reserved.</p>
+        <p>&copy; 2026 Mohammadreza Kavianpour. All rights reserved.</p>
     </footer>
 
     <script>
